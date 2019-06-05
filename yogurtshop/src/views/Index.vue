@@ -2,14 +2,20 @@
   <div class = 'index'>
     <v-toolbar class="grey lighten-2" flat height = "120">
       <v-layout justify-space-around>
-          <v-img v-for="image in image" :key="image.image">
+        <router-link to="/">
+          <v-image v-for="image in image" :key="image.image">
             <img :src="image.logo">
-          </v-img>
+          </v-image>
+        </router-link>
+      </v-layout>
+      <v-layout justify-space-around>
         <v-toolbar-title class="headline text-uppercase">
           <span class="mr-5">Home</span>
           <span class="mr-5">About</span>
           <span class="mr-5">Blog</span>
-          <span class="mr-2">Contact</span>  
+          <router-link to="About">
+            <span class="mr-2">Contact</span> 
+          </router-link> 
         </v-toolbar-title>
       </v-layout>
     </v-toolbar>
@@ -18,17 +24,20 @@
         <v-img v-for="image in image" :key="image.image">
           <img :src="image.back">
         </v-img>
+        <div>
+					<a href="">Freeze Delight</a>
+				</div>
       </v-layout>
     </v-container>
     <div>
-      <v-layout row> 
-        <v-flex class="pb-5 grey lighten-2"> 
+      <v-layout row wrap> 
+        <v-flex class="backCol"> 
           <v-container >
-            <h1 class="pt-3 pb-2 title brown--text text--lighten-1">NEW PRODUCT</h1>
-            <h1 class="pb-3 change-font pink--text">The Twist of Healthy Yogurt</h1>
-            <p class="body-1">This website template has been designed by freewebsitetemplates.com for you, for free. You can replace all this text with your own text.</p>
+            <h1 class=" mt-2 title brown--text text--lighten-1">NEW PRODUCT</h1>
+            <h1 class=" mt-2 change-font pink--text">The Twist of Healthy Yogurt</h1>
+            <p class=" maxWid body-1">This website template has been designed by freewebsitetemplates.com for you, for free. You can replace all this text with your own text.</p>
             <v-spacer></v-spacer>
-            <v-layout justify-space-between>
+            <v-layout class="imageSth" justify-space-between>
             <v-img v-for="image in image" :key="image.image">
               <img :src="image.yogurt">
             </v-img>
@@ -38,22 +47,67 @@
       </v-layout>
     </div>
     <div>
-      <v-layout row>
-        <v-flex class="pb-5 lime darken-1 " > 
+      <v-layout row class="blockDis">
+        <v-flex class="lime darken-1" > 
           <v-container>
-            <h1>NEW PRODUCT</h1>
-            <h2 class=" pink--text">The Twist of Healthy Yogurt</h2>
-            <p>This website template has been designed by freewebsitetemplates.com for you, for free. You can replace all this text with your own text.</p>
+            <router-link to="/">
+							<v-avatar class="mr-5">
+                <img src="/yogu.jpg"> 
+							</v-avatar>
+              <v-avatar class="mr-5">
+                <img src="/twitter.png">
+              </v-avatar>
+              <v-avatar class="mr-5">
+                <img src="/google.png"> 
+              </v-avatar>
+              <v-avatar class="mr-5 ">
+                <img src="/pinterest.png">
+              </v-avatar>
+            </router-link>
+          </v-container>
+        </v-flex>
+      </v-layout>
+      <v-layout row class="blockDis">
+        <v-flex class="lime darken-1" > 
+          <v-container>
+            <router-link to="/">
+							<v-avatar class="mr-5">
+                <img src="/facebook.jpg"> 
+							</v-avatar>
+              <v-avatar class="mr-5">
+                <img src="/twitter.png">
+              </v-avatar>
+              <v-avatar class="mr-5">
+                <img src="/google.png"> 
+              </v-avatar>
+              <v-avatar class="mr-5 ">
+                <img src="/pinterest.png">
+              </v-avatar>
+            </router-link>
+              <span > <p class="mt-5 caption white--text">&copy; 2023 Freeeze. All Rights Reserved.</p> </span>
           </v-container>
         </v-flex>
       </v-layout>
     </div>
-    <v-footer >
+    <v-footer  class="blockDis" >
       <v-layout row>
         <v-flex class="pink" > 
-          <v-container back>
-              <a href="" class="display-a"></a>
-							<h1>PRODUCTS</h1>
+          <v-container>
+            <router-link to="/">
+							<v-avatar class="mr-5">
+                <img src="/facebook.jpg"> 
+							</v-avatar>
+              <v-avatar class="mr-5">
+                <img src="/twitter.png">
+              </v-avatar>
+              <v-avatar class="mr-5">
+                <img src="/google.png"> 
+              </v-avatar>
+              <v-avatar class="mr-5 ">
+                <img src="/pinterest.png">
+              </v-avatar>
+            </router-link>
+              <span > <p class="mt-5 caption white--text">&copy; 2023 Freeeze. All Rights Reserved.</p> </span>
           </v-container>
         </v-flex>
       </v-layout>
@@ -69,44 +123,38 @@
 }
 </style>
 
-<style lang="stylus">
-.back {
-  background: url(/icons.png) no-repeat;
-	display: block;
-	height: 44;
-	margin: 0 auto 22px;
-	padding: 0;
-	width: 80px;
+
+<style lang="stylus" scoped>
+.backCol {
+  background-color: #eae7e8;
 }
 </style>
 
 <style lang="stylus" scoped>
-.display-a {
-    background-position: 0 -372px;
+.blockDis {
+  text-align: center;
+}
+</style>
+
+
+<style lang="stylus" scoped>
+.imageSth {
+  margin-top: -150px;
+	float: right; 
 }
 </style>
 
 <style lang="stylus" scoped>
-.display-b {
-    font-family: "Magra-bold", Sans, serif;
-    font-weight: 900;
+.maxWid {
+  max-width: 800px; 
 }
 </style>
 
 <style lang="stylus" scoped>
-.display-c {
-    font-family: "Magra-bold", Sans, serif;
-    font-weight: 900;
+. {
+ 
 }
 </style>
-
-<style lang="stylus" scoped>
-.display-d {
-    font-family: "Magra-bold", Sans, serif;
-    font-weight: 900;
-}
-</style>
-
 
 <script>
 
