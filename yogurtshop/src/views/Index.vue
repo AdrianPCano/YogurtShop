@@ -48,48 +48,37 @@
     </div>
     <div>
       <v-layout row class="blockDis">
-        <v-flex class="lime darken-1" > 
-          <v-container>
-            <router-link to="/">
-							<v-avatar class="mr-5">
-                <img src="/yogu.jpg"> 
+        <v-flex class="lime darken-1 " > 
+          <v-container >
+            <router-link to="About">
+							<v-avatar class="blockIcons">
+                <img src="/yogu.png"> 
 							</v-avatar>
-              <v-avatar class="mr-5">
-                <img src="/twitter.png">
+              <v-avatar class=" blockIcons">
+                <img src="/story.jpg">
               </v-avatar>
-              <v-avatar class="mr-5">
-                <img src="/google.png"> 
+              <v-avatar class="blockIcons">
+                <img src="/flavor.png"> 
               </v-avatar>
-              <v-avatar class="mr-5 ">
-                <img src="/pinterest.png">
+              <v-avatar class="blockIcons">
+                <img src="/location.png">
               </v-avatar>
             </router-link>
           </v-container>
         </v-flex>
       </v-layout>
-      <v-layout row class="blockDis">
+      <v-layout row wrap class="blockDis">
         <v-flex class="lime darken-1" > 
-          <v-container>
-            <router-link to="/">
-							<v-avatar class="mr-5">
-                <img src="/facebook.jpg"> 
-							</v-avatar>
-              <v-avatar class="mr-5">
-                <img src="/twitter.png">
-              </v-avatar>
-              <v-avatar class="mr-5">
-                <img src="/google.png"> 
-              </v-avatar>
-              <v-avatar class="mr-5 ">
-                <img src="/pinterest.png">
-              </v-avatar>
-            </router-link>
-              <span > <p class="mt-5 caption white--text">&copy; 2023 Freeeze. All Rights Reserved.</p> </span>
+          <v-container  class="white--text ">
+            <h1 class="iconText00"> PRODUCTS</h1>
+            <h1 class="iconText11"> OUR STORY</h1>
+            <h1 class="iconText22"> FLAVORS</h1>
+            <h1 class="iconText33"> OUR LOCATION</h1>
           </v-container>
         </v-flex>
       </v-layout>
     </div>
-    <v-footer  class="blockDis" >
+    <v-footer  class="blockDis footerWid" >
       <v-layout row>
         <v-flex class="pink" > 
           <v-container>
@@ -136,6 +125,11 @@
 }
 </style>
 
+<style lang="stylus" scoped>
+.blockIcons {
+  margin-right: 160px;
+}
+</style>
 
 <style lang="stylus" scoped>
 .imageSth {
@@ -151,8 +145,50 @@
 </style>
 
 <style lang="stylus" scoped>
-. {
- 
+.iconText00 {
+  font-family: "Lato", Sans, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-right: 770px;
+}
+</style>
+
+<style lang="stylus" scoped>
+.iconText11 {
+  font-family: "Lato", Sans, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: -28px;
+  margin-right: 690px;
+  float: right;
+}
+</style>
+
+<style lang="stylus" scoped>
+.iconText22 {
+  font-family: "Lato", Sans, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: -30px;
+  margin-right: 495px;  
+  float: right;
+}
+</style>
+<style lang="stylus" scoped>
+.iconText33 {
+  font-family: "Lato", Sans, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: -30px;
+  margin-right: 260px;
+  float: right;
+}
+</style>
+
+
+<style lang="stylus" scoped>
+.footerWid {
+  margin-top: 70px;
 }
 </style>
 
