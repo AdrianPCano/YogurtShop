@@ -82,7 +82,7 @@
         <p  class="body-1 blockDis ml-2 mr-2 mt-2">If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.</p>
       </div>
     </div>
-    <v-footer  >
+    <v-footer class=" footerWid" >
       <v-layout row wrap class="blockDis footerWid">
         <v-flex class="pink" > 
           <v-container>
@@ -176,7 +176,7 @@
 
 <style lang="stylus" scoped>
 .footerWid {
-  margin-top: 250px;
+  margin-top: 150px;
 }
 </style>
 
