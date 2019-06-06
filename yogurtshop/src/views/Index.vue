@@ -3,18 +3,18 @@
     <v-toolbar class="grey lighten-2" flat height = "120">
       <v-layout justify-space-around>
         <router-link to="/">
-          <v-image v-for="image in image" :key="image.image">
+          <v-img v-for="image in image" :key="image.image">
             <img :src="image.logo">
-          </v-image>
+          </v-img>
         </router-link>
       </v-layout>
       <v-layout justify-space-around>
         <v-toolbar-title class="headline text-uppercase">
-          <span class="mr-5">Home</span>
-          <span class="mr-5">About</span>
-          <span class="mr-5">Blog</span>
+          <span class="mr-5 fontTool">Home</span>
+          <span class="mr-5 fontTool">About</span>
+          <span class="mr-5 fontTool" >Blog</span>
           <router-link to="About">
-            <span class="mr-2">Contact</span> 
+            <span class="mr-2 fontTool">Contact</span> 
           </router-link> 
         </v-toolbar-title>
       </v-layout>
@@ -24,9 +24,6 @@
         <v-img v-for="image in image" :key="image.image">
           <img :src="image.back">
         </v-img>
-        <div>
-					<a href="">Freeze Delight</a>
-				</div>
       </v-layout>
     </v-container>
     <div>
@@ -133,7 +130,7 @@
 
 <style lang="stylus" scoped>
 .imageSth {
-  margin-top: -150px;
+  margin-top: -160px;
 	float: right; 
 }
 </style>
@@ -174,6 +171,7 @@
   float: right;
 }
 </style>
+
 <style lang="stylus" scoped>
 .iconText33 {
   font-family: "Lato", Sans, serif;
@@ -191,6 +189,17 @@
   margin-top: 70px;
 }
 </style>
+
+<style lang="stylus" scoped>
+.fontTool {
+  font-family: "Lato", Sans, serif;
+  font-size: 15px;
+  font-weight: normal;
+  color:  #7a6666;;
+}
+</style>
+
+
 
 <script>
 
